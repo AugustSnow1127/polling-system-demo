@@ -66,7 +66,10 @@ const TodayPoll = () => {
         <Record>Total number of votes recorded: {pollData && pollData[selectingIdx].answer.options.reduce((acc, cur) => acc + cur.count, 0)}</Record>
       </PollInfo>
 
-      <DonutChart currentData={pollData && pollData[selectingIdx].answer.options.map((option) => option.count)} />
+      <DonutChart
+        currentData={pollData && pollData[selectingIdx].answer.options.map((option) => option.count)}
+        currentLabel={pollData && pollData[selectingIdx].answer.options.map((option) => option.label)}
+      />
     </PollingListWrapper>
   )
 }

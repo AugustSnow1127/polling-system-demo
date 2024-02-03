@@ -6,7 +6,7 @@ import { DonutChartWrapper } from './style'
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 const DonutChart = (props) => {
-  const { currentData, isSmall, style } = props;
+  const { currentData, isSmall, style, currentLabel } = props;
 
   // use small to control if hide lagend
   const options = {
@@ -18,7 +18,7 @@ const DonutChart = (props) => {
   };
 
   const data = {
-    labels: ['YES', 'NO'],
+    labels: currentLabel,
     datasets: [
       {
         label: '# of Votes',
