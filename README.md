@@ -15,9 +15,11 @@ To install the polling system, follow these steps:
 
 1. Clone the repository: `git clone https://github.com/your-username/polling-system-demo.git`
 2. Navigate to the project directory: `cd polling-system-demo`
-3. Start Frontend -> Navigate to the project directory: `cd frontend`
+3. Navigate to the project directory: `cd frontend`
 4. Install the dependencies: `npm install`
 5. Start Frontend `npm start`;
-6. Start Backend -> Navigate to the project directory: `cd server`
-7. Install the dependencies: `npm install`
-8. Start Backend `npm start`;
+6. open another terminal
+7. Navigate to the project directory: `cd polling-system-demo`
+8. Navigate to the project directory: `cd server`
+9. Install the dependencies: `npm install`
+10. Start Backend `npm start`;
