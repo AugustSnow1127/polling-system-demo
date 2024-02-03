@@ -1,5 +1,6 @@
 import React from 'react'
 import TodayPoll from '../../components/TodayPoll'
+import HistoryPoll from '../../components/HistoryPoll'
 import axios from 'axios'
 import { usePollStore } from '../../store/usePollStore'
 
@@ -39,6 +40,7 @@ const PollingList = () => {
   return (
     <div>
       <TodayPoll />
+      <HistoryPoll />
     </div>
   )
 }

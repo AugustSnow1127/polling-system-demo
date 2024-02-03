@@ -6,7 +6,16 @@ import { DonutChartWrapper } from './style'
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 const DonutChart = (props) => {
-  const { currentData } = props;
+  const { currentData, isSmall, style } = props;
+
+  // use small to control if hide lagend
+  const options = {
+    plugins: {
+      legend: {
+        display: !isSmall,
+      },
+    },
+  };
 
   const data = {
     labels: ['YES', 'NO'],
@@ -17,8 +26,16 @@ const DonutChart = (props) => {
         backgroundColor: [
           '#E57435',
           '#133B6B',
+          '#6E7B8B',
+          '#43A047',
+          '#D32F2F',
+          '#FFC107',
         ],
         borderColor: [
+          '#ffffff',
+          '#ffffff',
+          '#ffffff',
+          '#ffffff',
           '#ffffff',
           '#ffffff',
         ],
@@ -28,8 +45,8 @@ const DonutChart = (props) => {
   }
 
   return (
-    <DonutChartWrapper>
-      <Doughnut data={data} />
+    <DonutChartWrapper className={isSmall && "small"} style={style}>
+      <Doughnut data={data} options={options}/>
     </DonutChartWrapper>
   )
 }

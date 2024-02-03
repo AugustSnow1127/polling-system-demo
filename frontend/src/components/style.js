@@ -38,9 +38,12 @@ export const TodayDate = styled.span`
 `;
 
 export const Label = styled.div`
-  width: 100px;
+  width: auto;
   height: 50px;
   margin-bottom: 20px;
+  cursor: pointer;
+  padding: 10px;
+  margin-right: 10px;
 
   &.yes {
     background-color: #E57435;
@@ -55,8 +58,10 @@ export const LabelWrapper = styled.div`
   margin: 200px 20px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  justify-content: flex-start;
+  // flex-direction: column;
+  flex-wrap: wrap;
+  width: 500px;
 `;
 
 export const Record = styled.div`
@@ -66,4 +71,45 @@ export const Record = styled.div`
 
 export const DonutChartWrapper = styled.div`
   flex: 1.5;
+
+  &.small {
+    width: 100px;
+    height: 100px;
+  }
 `;
+
+export const HistoryPollWrapper = styled.div`
+  // border: 1px solid red;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+export const PollItemWrapper = styled.div`
+// border: 1px solid red;
+
+  padding: 20px;
+  width: 50%;
+  height: 150px;
+  box-sizing: border-box;
+  display: flex;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #f5f5f5;
+  }
+`;
+
+export const PollItemInfo = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin-left: 20px;
+  text-align: left;
+`;
+
+export const DonutChartItemWrapper = styled.div`
+  width: 100px;
+`; 

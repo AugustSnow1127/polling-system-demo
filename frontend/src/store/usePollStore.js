@@ -7,12 +7,15 @@ export const usePollStore = () => useContext(PollContext);
 
 export const PollContextProvider = ({ children }) => {
   const [pollData, setPollData] = React.useState(null);
+  const [selectingIdx, setselectingIdx] = React.useState(0);
 
   return (
     <PollContext.Provider
       value={{
         pollData,
         setPollData,
+        selectingIdx,
+        setselectingIdx,
       }}
     >
       {children}

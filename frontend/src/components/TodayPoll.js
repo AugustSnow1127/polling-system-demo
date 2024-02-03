@@ -13,9 +13,17 @@ import {
   Record,
 } from './style'
 
+const btnMap = [
+  '#E57435',
+  '#133B6B',
+  '#6E7B8B',
+  '#43A047',
+  '#D32F2F',
+  '#FFC107',
+];
+
 const TodayPoll = () => {
-  const { pollData, setPollData } = usePollStore();
-  const [selectingIdx, setSelectingIdx] = React.useState(0);
+  const { pollData, setPollData, selectingIdx } = usePollStore();
 
   React.useEffect(() => {
     if (pollData) {
@@ -38,7 +46,10 @@ const TodayPoll = () => {
               return (
                 <Label
                   key={index}
-                  className={option.label.toLowerCase()}
+                  style={{
+                    backgroundColor: btnMap[index],
+                    // width: "120%"
+                  }}
                   onClick={() => {
                     const newPollData = [...pollData];
                     newPollData[selectingIdx].answer.options[index].count += 1;
